@@ -11,7 +11,7 @@ public class BufferedFileRead {
             BufferedReader file = new BufferedReader(new FileReader("src/files/FileRead.java"));
             String line;
             while((line= file.readLine()) != null) {
-
+                System.out.println(line);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
