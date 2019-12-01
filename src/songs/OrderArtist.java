@@ -22,7 +22,7 @@ public class OrderArtist {
             System.out.println(songs.size());
             System.out.println(songs);
 
-            Collections.sort(songs);
+            Collections.sort(songs, new ArtistComparator());
             System.out.println(songs);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
