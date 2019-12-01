@@ -12,10 +12,12 @@ public class OrderArtist {
         try {
             BufferedReader file = new BufferedReader(new FileReader("titles.txt"));
             String line;
-            ArrayList<String> songs = new ArrayList<>();
+            ArrayList<Song> songs = new ArrayList<>();
 
             while ((line = file.readLine()) != null) {
-                songs.add(line);
+                String [] parts = line.split("/");
+                Song song = new Song(parts[0], parts[1]);
+                songs.add(song);
             }
             System.out.println(songs.size());
             System.out.println(songs);
@@ -29,4 +31,4 @@ public class OrderArtist {
         }
     }
 }
-}
+
