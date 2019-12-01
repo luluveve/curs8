@@ -20,7 +20,7 @@ public class OrderArtist {
             System.out.println(songs.size());
             System.out.println(songs);
 
-            Collections.shuffle(songs);
+            Collections.sort(songs);
             System.out.println(songs);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
